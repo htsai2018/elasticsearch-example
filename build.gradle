@@ -1,0 +1,27 @@
+plugins {
+    id 'org.springframework.boot' version '2.1.3.RELEASE'
+    id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.hct'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.elasticsearch:elasticsearch:6.6.0'
+    implementation  'org.elasticsearch.client:elasticsearch-rest-high-level-client:6.6.0'
+    implementation 'org.projectlombok:lombok:1.18.6'
+    implementation 'commons-io:commons-io:2.6'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.mockito:mockito-core:2.23.4'
+    testImplementation 'org.assertj:assertj-core:3.11.1'
+    testImplementation 'org.awaitility:awaitility:3.0.0'
+}
